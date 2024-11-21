@@ -17,7 +17,7 @@ def get_messages():
     conn.close()
 
     messages_list = [dict(row) for row in messages]
-    return render_template('index.html', messages = messages_list)
+    return jsonify(messages_list)
 
 # Get message by ID
 @app.route('/messages/<int:message_id>', methods=['GET'])
@@ -36,7 +36,6 @@ def get_message(message_id):
     # Convert the result to a dictionary
     message_dict = dict(message)
     return jsonify(message_dict)
-
 
 # Create new message
 @app.route('/messages', methods=['POST'])

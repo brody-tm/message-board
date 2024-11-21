@@ -1,0 +1,21 @@
+----------------Get all messages:-------------------------
+GET request to http://127.0.0.1:5000/messages
+
+----------------Get a message by id:----------------------
+GET request to http://127.0.0.1:5000/messages/[id]
+where [id] is the id of a post
+
+----------------Create a message:-------------------------
+POST request to http://127.0.0.1:5000/messages
+Include in body in JSON format: {"content": [content]}
+where [content] is the content of a post
+
+----------------Edit a message by id:---------------------
+PUT request to http://127.0.0.1:5000/messages/[id]
+where [id] is the id of a post
+Include in body in JSON format: {"content": [content]}
+where [content] is the content of a post
+
+----------------Delete a message by id:-------------------
+DELETE request to http://127.0.0.1:5000/messages/[id]
+where [id] is the id of a post
